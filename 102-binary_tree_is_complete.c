@@ -7,11 +7,11 @@
  *  @size: is the size of the queue
  *  Return: the queue node added or NULL
  */
-queue *add_queue(const binary_tree_t *node, queue **last, size_t *size)
+levelorder_queue_t *add_queue(const binary_tree_t *node, levelorder_queue_t **last, size_t *size)
 {
-	queue *new_node = NULL;
+	levelorder_queue_t *new_node = NULL;
 
-	new_node = malloc(sizeof(queue));
+	new_node = malloc(sizeof(levelorder_queue_t));
 	if (!new_node)
 		return (NULL);
 	new_node->next = NULL;
