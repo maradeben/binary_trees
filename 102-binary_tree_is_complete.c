@@ -32,9 +32,9 @@ levelorder_queue_t *add_queue(const binary_tree_t *node, levelorder_queue_t **la
  * @size: is the size of the queue
  * Return: Nothing
  */
-void pop_queue(queue **head, size_t *size)
+void pop_queue(levelorder_queue_t **head, size_t *size)
 {
-	queue *free_n = NULL;
+	levelorder_queue_t *free_n = NULL;
 
 	if (*head)
 	{
@@ -54,7 +54,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	int answer = 0;
 	size_t q_size = 0;
-	queue *head = NULL, *tail = NULL;
+	levelorder_queue_t *head = NULL, *tail = NULL;
 	binary_tree_t *node;
 
 	head = add_queue(tree, &tail, &q_size);
